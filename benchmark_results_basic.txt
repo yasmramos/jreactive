@@ -1,0 +1,247 @@
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.BasicOperatorsBenchmark.ourFilter
+# Parameters: (size = 1000)
+
+# Run progress: 0.00% complete, ETA 00:00:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 306.014 ops/ms
+# Warmup Iteration   2: 349.634 ops/ms
+Iteration   1: 402.465 ops/ms
+Iteration   2: 413.024 ops/ms
+Iteration   3: 398.995 ops/ms
+
+
+Result "com.reactive.benchmarks.BasicOperatorsBenchmark.ourFilter":
+  404.828 ±(99.9%) 133.306 ops/ms [Average]
+  (min, avg, max) = (398.995, 404.828, 413.024), stdev = 7.307
+  CI (99.9%): [271.522, 538.134] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.BasicOperatorsBenchmark.ourMap
+# Parameters: (size = 1000)
+
+# Run progress: 12.50% complete, ETA 00:00:37
+# Fork: 1 of 1
+# Warmup Iteration   1: 275.719 ops/ms
+# Warmup Iteration   2: 298.157 ops/ms
+Iteration   1: 237.040 ops/ms
+Iteration   2: 225.916 ops/ms
+Iteration   3: 238.699 ops/ms
+
+
+Result "com.reactive.benchmarks.BasicOperatorsBenchmark.ourMap":
+  233.885 ±(99.9%) 126.808 ops/ms [Average]
+  (min, avg, max) = (225.916, 233.885, 238.699), stdev = 6.951
+  CI (99.9%): [107.077, 360.693] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.BasicOperatorsBenchmark.ourMapFilter
+# Parameters: (size = 1000)
+
+# Run progress: 25.00% complete, ETA 00:00:32
+# Fork: 1 of 1
+# Warmup Iteration   1: 136.000 ops/ms
+# Warmup Iteration   2: 161.007 ops/ms
+Iteration   1: 175.501 ops/ms
+Iteration   2: 172.196 ops/ms
+Iteration   3: 171.859 ops/ms
+
+
+Result "com.reactive.benchmarks.BasicOperatorsBenchmark.ourMapFilter":
+  173.185 ±(99.9%) 36.712 ops/ms [Average]
+  (min, avg, max) = (171.859, 173.185, 175.501), stdev = 2.012
+  CI (99.9%): [136.473, 209.897] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.BasicOperatorsBenchmark.ourMapFilterFlatMap
+# Parameters: (size = 1000)
+
+# Run progress: 37.50% complete, ETA 00:00:26
+# Fork: 1 of 1
+# Warmup Iteration   1: 571.370 ops/ms
+# Warmup Iteration   2: 748.327 ops/ms
+Iteration   1: 779.474 ops/ms
+Iteration   2: 756.768 ops/ms
+Iteration   3: 754.925 ops/ms
+
+
+Result "com.reactive.benchmarks.BasicOperatorsBenchmark.ourMapFilterFlatMap":
+  763.722 ±(99.9%) 249.440 ops/ms [Average]
+  (min, avg, max) = (754.925, 763.722, 779.474), stdev = 13.673
+  CI (99.9%): [514.282, 1013.162] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.BasicOperatorsBenchmark.rxJavaFilter
+# Parameters: (size = 1000)
+
+# Run progress: 50.00% complete, ETA 00:00:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 237.223 ops/ms
+# Warmup Iteration   2: 297.648 ops/ms
+Iteration   1: 294.484 ops/ms
+Iteration   2: 296.044 ops/ms
+Iteration   3: 292.461 ops/ms
+
+
+Result "com.reactive.benchmarks.BasicOperatorsBenchmark.rxJavaFilter":
+  294.330 ±(99.9%) 32.780 ops/ms [Average]
+  (min, avg, max) = (292.461, 294.330, 296.044), stdev = 1.797
+  CI (99.9%): [261.549, 327.110] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.BasicOperatorsBenchmark.rxJavaMap
+# Parameters: (size = 1000)
+
+# Run progress: 62.50% complete, ETA 00:00:15
+# Fork: 1 of 1
+# Warmup Iteration   1: 141.288 ops/ms
+# Warmup Iteration   2: 174.472 ops/ms
+Iteration   1: 183.520 ops/ms
+Iteration   2: 181.511 ops/ms
+Iteration   3: 171.356 ops/ms
+
+
+Result "com.reactive.benchmarks.BasicOperatorsBenchmark.rxJavaMap":
+  178.796 ±(99.9%) 118.962 ops/ms [Average]
+  (min, avg, max) = (171.356, 178.796, 183.520), stdev = 6.521
+  CI (99.9%): [59.833, 297.758] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.BasicOperatorsBenchmark.rxJavaMapFilter
+# Parameters: (size = 1000)
+
+# Run progress: 75.00% complete, ETA 00:00:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 126.785 ops/ms
+# Warmup Iteration   2: 160.470 ops/ms
+Iteration   1: 160.822 ops/ms
+Iteration   2: 167.205 ops/ms
+Iteration   3: 167.477 ops/ms
+
+
+Result "com.reactive.benchmarks.BasicOperatorsBenchmark.rxJavaMapFilter":
+  165.168 ±(99.9%) 68.706 ops/ms [Average]
+  (min, avg, max) = (160.822, 165.168, 167.477), stdev = 3.766
+  CI (99.9%): [96.462, 233.874] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.BasicOperatorsBenchmark.rxJavaMapFilterFlatMap
+# Parameters: (size = 1000)
+
+# Run progress: 87.50% complete, ETA 00:00:05
+# Fork: 1 of 1
+# Warmup Iteration   1: 152.287 ops/ms
+# Warmup Iteration   2: 194.431 ops/ms
+Iteration   1: 209.610 ops/ms
+Iteration   2: 203.211 ops/ms
+Iteration   3: 205.748 ops/ms
+
+
+Result "com.reactive.benchmarks.BasicOperatorsBenchmark.rxJavaMapFilterFlatMap":
+  206.190 ±(99.9%) 58.792 ops/ms [Average]
+  (min, avg, max) = (203.211, 206.190, 209.610), stdev = 3.223
+  CI (99.9%): [147.397, 264.982] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:00:42
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                       (size)   Mode  Cnt    Score     Error   Units
+BasicOperatorsBenchmark.ourFilter                 1000  thrpt    3  404.828 ± 133.306  ops/ms
+BasicOperatorsBenchmark.ourMap                    1000  thrpt    3  233.885 ± 126.808  ops/ms
+BasicOperatorsBenchmark.ourMapFilter              1000  thrpt    3  173.185 ±  36.712  ops/ms
+BasicOperatorsBenchmark.ourMapFilterFlatMap       1000  thrpt    3  763.722 ± 249.440  ops/ms
+BasicOperatorsBenchmark.rxJavaFilter              1000  thrpt    3  294.330 ±  32.780  ops/ms
+BasicOperatorsBenchmark.rxJavaMap                 1000  thrpt    3  178.796 ± 118.962  ops/ms
+BasicOperatorsBenchmark.rxJavaMapFilter           1000  thrpt    3  165.168 ±  68.706  ops/ms
+BasicOperatorsBenchmark.rxJavaMapFilterFlatMap    1000  thrpt    3  206.190 ±  58.792  ops/ms

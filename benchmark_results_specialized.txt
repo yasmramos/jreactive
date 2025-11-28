@@ -1,0 +1,19 @@
+nohup: ignoring input
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 2 iterations, 2 s each
+# Measurement: 3 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableAndThen
+# Parameters: (count = 10)
+
+# Run progress: 0.00% complete, ETA 00:20:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 151017.330 ops/ms
+# Warmup Iteration   2: 274432.688 ops/ms
+Iteration   1: 

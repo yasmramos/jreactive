@@ -1,0 +1,1720 @@
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableAndThen
+# Parameters: (count = 10)
+
+# Run progress: 0.00% complete, ETA 00:08:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 151911.615 ops/ms
+Iteration   1: 262443.383 ops/ms
+Iteration   2: 230208.595 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableAndThen":
+  246325.989 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableAndThen
+# Parameters: (count = 100)
+
+# Run progress: 0.83% complete, ETA 00:08:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 21395.227 ops/ms
+Iteration   1: 25354.602 ops/ms
+Iteration   2: 25423.113 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableAndThen":
+  25388.858 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableAndThen
+# Parameters: (count = 1000)
+
+# Run progress: 1.67% complete, ETA 00:08:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 2631.070 ops/ms
+Iteration   1: 3423.554 ops/ms
+Iteration   2: 3343.339 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableAndThen":
+  3383.446 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableComplete
+# Parameters: (count = 10)
+
+# Run progress: 2.50% complete, ETA 00:08:15
+# Fork: 1 of 1
+# Warmup Iteration   1: 150049.966 ops/ms
+Iteration   1: 279434.297 ops/ms
+Iteration   2: 234685.957 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableComplete":
+  257060.127 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableComplete
+# Parameters: (count = 100)
+
+# Run progress: 3.33% complete, ETA 00:08:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 21609.060 ops/ms
+Iteration   1: 26335.183 ops/ms
+Iteration   2: 25779.985 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableComplete":
+  26057.584 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableComplete
+# Parameters: (count = 1000)
+
+# Run progress: 4.17% complete, ETA 00:08:05
+# Fork: 1 of 1
+# Warmup Iteration   1: 3089.408 ops/ms
+Iteration   1: 3382.154 ops/ms
+Iteration   2: 3448.300 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableComplete":
+  3415.227 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableConcat
+# Parameters: (count = 10)
+
+# Run progress: 5.00% complete, ETA 00:08:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 5882.441 ops/ms
+Iteration   1: 5910.159 ops/ms
+Iteration   2: 5989.008 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableConcat":
+  5949.583 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableConcat
+# Parameters: (count = 100)
+
+# Run progress: 5.83% complete, ETA 00:07:56
+# Fork: 1 of 1
+# Warmup Iteration   1: 585.973 ops/ms
+Iteration   1: 598.907 ops/ms
+Iteration   2: 612.461 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableConcat":
+  605.684 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableConcat
+# Parameters: (count = 1000)
+
+# Run progress: 6.67% complete, ETA 00:07:51
+# Fork: 1 of 1
+# Warmup Iteration   1: 60.877 ops/ms
+Iteration   1: 61.310 ops/ms
+Iteration   2: 59.687 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableConcat":
+  60.499 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableFromAction
+# Parameters: (count = 10)
+
+# Run progress: 7.50% complete, ETA 00:07:47
+# Fork: 1 of 1
+# Warmup Iteration   1: 17457.642 ops/ms
+Iteration   1: 17446.942 ops/ms
+Iteration   2: 18028.621 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableFromAction":
+  17737.781 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableFromAction
+# Parameters: (count = 100)
+
+# Run progress: 8.33% complete, ETA 00:07:42
+# Fork: 1 of 1
+# Warmup Iteration   1: 1956.253 ops/ms
+Iteration   1: 1965.347 ops/ms
+Iteration   2: 1942.287 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableFromAction":
+  1953.817 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableFromAction
+# Parameters: (count = 1000)
+
+# Run progress: 9.17% complete, ETA 00:07:38
+# Fork: 1 of 1
+# Warmup Iteration   1: 196.783 ops/ms
+Iteration   1: 203.145 ops/ms
+Iteration   2: 194.702 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableFromAction":
+  198.924 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableMerge
+# Parameters: (count = 10)
+
+# Run progress: 10.00% complete, ETA 00:07:34
+# Fork: 1 of 1
+# Warmup Iteration   1: 16348.192 ops/ms
+Iteration   1: 16560.969 ops/ms
+Iteration   2: 18560.717 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableMerge":
+  17560.843 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableMerge
+# Parameters: (count = 100)
+
+# Run progress: 10.83% complete, ETA 00:07:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 1664.520 ops/ms
+Iteration   1: 1712.067 ops/ms
+Iteration   2: 1835.349 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableMerge":
+  1773.708 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableMerge
+# Parameters: (count = 1000)
+
+# Run progress: 11.67% complete, ETA 00:07:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 165.966 ops/ms
+Iteration   1: 173.489 ops/ms
+Iteration   2: 180.767 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableMerge":
+  177.128 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableOnErrorComplete
+# Parameters: (count = 10)
+
+# Run progress: 12.50% complete, ETA 00:07:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 152958.577 ops/ms
+Iteration   1: 278076.374 ops/ms
+Iteration   2: 231058.562 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableOnErrorComplete":
+  254567.468 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableOnErrorComplete
+# Parameters: (count = 100)
+
+# Run progress: 13.33% complete, ETA 00:07:17
+# Fork: 1 of 1
+# Warmup Iteration   1: 22049.299 ops/ms
+Iteration   1: 26551.585 ops/ms
+Iteration   2: 25547.394 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableOnErrorComplete":
+  26049.489 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableOnErrorComplete
+# Parameters: (count = 1000)
+
+# Run progress: 14.17% complete, ETA 00:07:13
+# Fork: 1 of 1
+# Warmup Iteration   1: 3050.537 ops/ms
+Iteration   1: 3335.180 ops/ms
+Iteration   2: 3273.906 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourCompletableOnErrorComplete":
+  3304.543 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeDefaultIfEmpty
+# Parameters: (count = 10)
+
+# Run progress: 15.00% complete, ETA 00:07:08
+# Fork: 1 of 1
+# Warmup Iteration   1: 228349.824 ops/ms
+Iteration   1: 227939.031 ops/ms
+Iteration   2: 152277.155 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeDefaultIfEmpty":
+  190108.093 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeDefaultIfEmpty
+# Parameters: (count = 100)
+
+# Run progress: 15.83% complete, ETA 00:07:04
+# Fork: 1 of 1
+# Warmup Iteration   1: 20429.349 ops/ms
+Iteration   1: 20763.015 ops/ms
+Iteration   2: 20042.899 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeDefaultIfEmpty":
+  20402.957 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeDefaultIfEmpty
+# Parameters: (count = 1000)
+
+# Run progress: 16.67% complete, ETA 00:07:00
+# Fork: 1 of 1
+# Warmup Iteration   1: 2601.744 ops/ms
+Iteration   1: 2610.213 ops/ms
+Iteration   2: 2567.166 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeDefaultIfEmpty":
+  2588.690 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeEmpty
+# Parameters: (count = 10)
+
+# Run progress: 17.50% complete, ETA 00:06:56
+# Fork: 1 of 1
+# Warmup Iteration   1: 265014.739 ops/ms
+Iteration   1: 260853.704 ops/ms
+Iteration   2: 238566.673 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeEmpty":
+  249710.189 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeEmpty
+# Parameters: (count = 100)
+
+# Run progress: 18.33% complete, ETA 00:06:52
+# Fork: 1 of 1
+# Warmup Iteration   1: 26136.653 ops/ms
+Iteration   1: 26443.666 ops/ms
+Iteration   2: 25533.777 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeEmpty":
+  25988.721 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeEmpty
+# Parameters: (count = 1000)
+
+# Run progress: 19.17% complete, ETA 00:06:47
+# Fork: 1 of 1
+# Warmup Iteration   1: 3303.648 ops/ms
+Iteration   1: 3402.579 ops/ms
+Iteration   2: 3416.972 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeEmpty":
+  3409.776 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFilter
+# Parameters: (count = 10)
+
+# Run progress: 20.00% complete, ETA 00:06:43
+# Fork: 1 of 1
+# Warmup Iteration   1: 105584.842 ops/ms
+Iteration   1: 105949.817 ops/ms
+Iteration   2: 126253.484 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFilter":
+  116101.650 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFilter
+# Parameters: (count = 100)
+
+# Run progress: 20.83% complete, ETA 00:06:39
+# Fork: 1 of 1
+# Warmup Iteration   1: 13232.193 ops/ms
+Iteration   1: 12672.786 ops/ms
+Iteration   2: 11803.228 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFilter":
+  12238.007 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFilter
+# Parameters: (count = 1000)
+
+# Run progress: 21.67% complete, ETA 00:06:35
+# Fork: 1 of 1
+# Warmup Iteration   1: 937.266 ops/ms
+Iteration   1: 885.818 ops/ms
+Iteration   2: 968.921 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFilter":
+  927.369 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFlatMap
+# Parameters: (count = 10)
+
+# Run progress: 22.50% complete, ETA 00:06:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 10081.591 ops/ms
+Iteration   1: 10280.347 ops/ms
+Iteration   2: 12573.847 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFlatMap":
+  11427.097 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFlatMap
+# Parameters: (count = 100)
+
+# Run progress: 23.33% complete, ETA 00:06:26
+# Fork: 1 of 1
+# Warmup Iteration   1: 873.486 ops/ms
+Iteration   1: 907.369 ops/ms
+Iteration   2: 1206.959 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFlatMap":
+  1057.164 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFlatMap
+# Parameters: (count = 1000)
+
+# Run progress: 24.17% complete, ETA 00:06:22
+# Fork: 1 of 1
+# Warmup Iteration   1: 91.223 ops/ms
+Iteration   1: 92.024 ops/ms
+Iteration   2: 101.212 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFlatMap":
+  96.618 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFromCallable
+# Parameters: (count = 10)
+
+# Run progress: 25.00% complete, ETA 00:06:18
+# Fork: 1 of 1
+# Warmup Iteration   1: 227859.197 ops/ms
+Iteration   1: 227132.153 ops/ms
+Iteration   2: 152398.531 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFromCallable":
+  189765.342 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFromCallable
+# Parameters: (count = 100)
+
+# Run progress: 25.83% complete, ETA 00:06:14
+# Fork: 1 of 1
+# Warmup Iteration   1: 21314.848 ops/ms
+Iteration   1: 21453.527 ops/ms
+Iteration   2: 20453.982 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFromCallable":
+  20953.755 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFromCallable
+# Parameters: (count = 1000)
+
+# Run progress: 26.67% complete, ETA 00:06:09
+# Fork: 1 of 1
+# Warmup Iteration   1: 2488.212 ops/ms
+Iteration   1: 2484.448 ops/ms
+Iteration   2: 2479.876 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeFromCallable":
+  2482.162 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeJust
+# Parameters: (count = 10)
+
+# Run progress: 27.50% complete, ETA 00:06:05
+# Fork: 1 of 1
+# Warmup Iteration   1: 192639.068 ops/ms
+Iteration   1: 203225.250 ops/ms
+Iteration   2: 201562.798 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeJust":
+  202394.024 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeJust
+# Parameters: (count = 100)
+
+# Run progress: 28.33% complete, ETA 00:06:01
+# Fork: 1 of 1
+# Warmup Iteration   1: 17625.458 ops/ms
+Iteration   1: 17546.241 ops/ms
+Iteration   2: 17777.745 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeJust":
+  17661.993 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeJust
+# Parameters: (count = 1000)
+
+# Run progress: 29.17% complete, ETA 00:05:57
+# Fork: 1 of 1
+# Warmup Iteration   1: 972.223 ops/ms
+Iteration   1: 979.343 ops/ms
+Iteration   2: 987.653 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeJust":
+  983.498 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeMap
+# Parameters: (count = 10)
+
+# Run progress: 30.00% complete, ETA 00:05:53
+# Fork: 1 of 1
+# Warmup Iteration   1: 132315.705 ops/ms
+Iteration   1: 134831.252 ops/ms
+Iteration   2: 142305.481 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeMap":
+  138568.366 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeMap
+# Parameters: (count = 100)
+
+# Run progress: 30.83% complete, ETA 00:05:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 865.503 ops/ms
+Iteration   1: 893.850 ops/ms
+Iteration   2: 1189.796 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeMap":
+  1041.823 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeMap
+# Parameters: (count = 1000)
+
+# Run progress: 31.67% complete, ETA 00:05:44
+# Fork: 1 of 1
+# Warmup Iteration   1: 90.060 ops/ms
+Iteration   1: 94.625 ops/ms
+Iteration   2: 102.479 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeMap":
+  98.552 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeSwitchIfEmpty
+# Parameters: (count = 10)
+
+# Run progress: 32.50% complete, ETA 00:05:40
+# Fork: 1 of 1
+# Warmup Iteration   1: 224225.765 ops/ms
+Iteration   1: 224127.033 ops/ms
+Iteration   2: 150570.698 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeSwitchIfEmpty":
+  187348.865 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeSwitchIfEmpty
+# Parameters: (count = 100)
+
+# Run progress: 33.33% complete, ETA 00:05:36
+# Fork: 1 of 1
+# Warmup Iteration   1: 20555.545 ops/ms
+Iteration   1: 20979.849 ops/ms
+Iteration   2: 19341.261 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeSwitchIfEmpty":
+  20160.555 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeSwitchIfEmpty
+# Parameters: (count = 1000)
+
+# Run progress: 34.17% complete, ETA 00:05:31
+# Fork: 1 of 1
+# Warmup Iteration   1: 2562.486 ops/ms
+Iteration   1: 2640.468 ops/ms
+Iteration   2: 2430.996 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourMaybeSwitchIfEmpty":
+  2535.732 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleFlatMap
+# Parameters: (count = 10)
+
+# Run progress: 35.00% complete, ETA 00:05:27
+# Fork: 1 of 1
+# Warmup Iteration   1: 10418.456 ops/ms
+Iteration   1: 10539.163 ops/ms
+Iteration   2: 13004.613 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleFlatMap":
+  11771.888 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleFlatMap
+# Parameters: (count = 100)
+
+# Run progress: 35.83% complete, ETA 00:05:23
+# Fork: 1 of 1
+# Warmup Iteration   1: 912.741 ops/ms
+Iteration   1: 938.116 ops/ms
+Iteration   2: 1276.770 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleFlatMap":
+  1107.443 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleFlatMap
+# Parameters: (count = 1000)
+
+# Run progress: 36.67% complete, ETA 00:05:19
+# Fork: 1 of 1
+# Warmup Iteration   1: 93.237 ops/ms
+Iteration   1: 96.431 ops/ms
+Iteration   2: 110.476 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleFlatMap":
+  103.454 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleFromCallable
+# Parameters: (count = 10)
+
+# Run progress: 37.50% complete, ETA 00:05:15
+# Fork: 1 of 1
+# Warmup Iteration   1: 230988.528 ops/ms
+Iteration   1: 225505.661 ops/ms
+Iteration   2: 142139.053 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleFromCallable":
+  183822.357 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleFromCallable
+# Parameters: (count = 100)
+
+# Run progress: 38.33% complete, ETA 00:05:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 20766.552 ops/ms
+Iteration   1: 21109.295 ops/ms
+Iteration   2: 20497.728 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleFromCallable":
+  20803.512 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleFromCallable
+# Parameters: (count = 1000)
+
+# Run progress: 39.17% complete, ETA 00:05:06
+# Fork: 1 of 1
+# Warmup Iteration   1: 2449.428 ops/ms
+Iteration   1: 2479.904 ops/ms
+Iteration   2: 2470.285 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleFromCallable":
+  2475.094 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleJust
+# Parameters: (count = 10)
+
+# Run progress: 40.00% complete, ETA 00:05:02
+# Fork: 1 of 1
+# Warmup Iteration   1: 187015.077 ops/ms
+Iteration   1: 201024.173 ops/ms
+Iteration   2: 205868.146 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleJust":
+  203446.159 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleJust
+# Parameters: (count = 100)
+
+# Run progress: 40.83% complete, ETA 00:04:58
+# Fork: 1 of 1
+# Warmup Iteration   1: 17477.438 ops/ms
+Iteration   1: 16636.703 ops/ms
+Iteration   2: 17868.179 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleJust":
+  17252.441 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleJust
+# Parameters: (count = 1000)
+
+# Run progress: 41.67% complete, ETA 00:04:54
+# Fork: 1 of 1
+# Warmup Iteration   1: 960.480 ops/ms
+Iteration   1: 967.127 ops/ms
+Iteration   2: 1000.421 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleJust":
+  983.774 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleMap
+# Parameters: (count = 10)
+
+# Run progress: 42.50% complete, ETA 00:04:49
+# Fork: 1 of 1
+# Warmup Iteration   1: 132799.784 ops/ms
+Iteration   1: 135092.695 ops/ms
+Iteration   2: 141880.353 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleMap":
+  138486.524 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleMap
+# Parameters: (count = 100)
+
+# Run progress: 43.33% complete, ETA 00:04:45
+# Fork: 1 of 1
+# Warmup Iteration   1: 932.947 ops/ms
+Iteration   1: 946.439 ops/ms
+Iteration   2: 1244.891 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleMap":
+  1095.665 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleMap
+# Parameters: (count = 1000)
+
+# Run progress: 44.17% complete, ETA 00:04:41
+# Fork: 1 of 1
+# Warmup Iteration   1: 93.846 ops/ms
+Iteration   1: 80.745 ops/ms
+Iteration   2: 109.990 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleMap":
+  95.367 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleOnErrorReturn
+# Parameters: (count = 10)
+
+# Run progress: 45.00% complete, ETA 00:04:37
+# Fork: 1 of 1
+# Warmup Iteration   1: 178741.549 ops/ms
+Iteration   1: 201889.842 ops/ms
+Iteration   2: 204988.254 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleOnErrorReturn":
+  203439.048 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleOnErrorReturn
+# Parameters: (count = 100)
+
+# Run progress: 45.83% complete, ETA 00:04:33
+# Fork: 1 of 1
+# Warmup Iteration   1: 16933.802 ops/ms
+Iteration   1: 17514.656 ops/ms
+Iteration   2: 17964.707 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleOnErrorReturn":
+  17739.682 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleOnErrorReturn
+# Parameters: (count = 1000)
+
+# Run progress: 46.67% complete, ETA 00:04:28
+# Fork: 1 of 1
+# Warmup Iteration   1: 978.422 ops/ms
+Iteration   1: 967.921 ops/ms
+Iteration   2: 994.933 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleOnErrorReturn":
+  981.427 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleZip
+# Parameters: (count = 10)
+
+# Run progress: 47.50% complete, ETA 00:04:24
+# Fork: 1 of 1
+# Warmup Iteration   1: 96315.847 ops/ms
+Iteration   1: 100314.152 ops/ms
+Iteration   2: 106680.470 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleZip":
+  103497.311 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleZip
+# Parameters: (count = 100)
+
+# Run progress: 48.33% complete, ETA 00:04:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 185.379 ops/ms
+Iteration   1: 189.073 ops/ms
+Iteration   2: 186.971 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleZip":
+  188.022 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleZip
+# Parameters: (count = 1000)
+
+# Run progress: 49.17% complete, ETA 00:04:16
+# Fork: 1 of 1
+# Warmup Iteration   1: 18.035 ops/ms
+Iteration   1: 19.100 ops/ms
+Iteration   2: 19.549 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.ourSingleZip":
+  19.325 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableAndThen
+# Parameters: (count = 10)
+
+# Run progress: 50.00% complete, ETA 00:04:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 3184.446 ops/ms
+Iteration   1: 3394.390 ops/ms
+Iteration   2: 3549.770 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableAndThen":
+  3472.080 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableAndThen
+# Parameters: (count = 100)
+
+# Run progress: 50.83% complete, ETA 00:04:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 329.866 ops/ms
+Iteration   1: 346.893 ops/ms
+Iteration   2: 358.098 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableAndThen":
+  352.495 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableAndThen
+# Parameters: (count = 1000)
+
+# Run progress: 51.67% complete, ETA 00:04:03
+# Fork: 1 of 1
+# Warmup Iteration   1: 33.657 ops/ms
+Iteration   1: 34.917 ops/ms
+Iteration   2: 35.541 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableAndThen":
+  35.229 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableComplete
+# Parameters: (count = 10)
+
+# Run progress: 52.50% complete, ETA 00:03:59
+# Fork: 1 of 1
+# Warmup Iteration   1: 7916.985 ops/ms
+Iteration   1: 8195.604 ops/ms
+Iteration   2: 8511.786 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableComplete":
+  8353.695 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableComplete
+# Parameters: (count = 100)
+
+# Run progress: 53.33% complete, ETA 00:03:55
+# Fork: 1 of 1
+# Warmup Iteration   1: 781.236 ops/ms
+Iteration   1: 820.250 ops/ms
+Iteration   2: 858.100 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableComplete":
+  839.175 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableComplete
+# Parameters: (count = 1000)
+
+# Run progress: 54.17% complete, ETA 00:03:51
+# Fork: 1 of 1
+# Warmup Iteration   1: 79.805 ops/ms
+Iteration   1: 82.060 ops/ms
+Iteration   2: 83.056 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableComplete":
+  82.558 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableConcat
+# Parameters: (count = 10)
+
+# Run progress: 55.00% complete, ETA 00:03:46
+# Fork: 1 of 1
+# Warmup Iteration   1: 1052.603 ops/ms
+Iteration   1: 1098.740 ops/ms
+Iteration   2: 1143.032 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableConcat":
+  1120.886 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableConcat
+# Parameters: (count = 100)
+
+# Run progress: 55.83% complete, ETA 00:03:42
+# Fork: 1 of 1
+# Warmup Iteration   1: 104.843 ops/ms
+Iteration   1: 111.807 ops/ms
+Iteration   2: 112.854 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableConcat":
+  112.331 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableConcat
+# Parameters: (count = 1000)
+
+# Run progress: 56.67% complete, ETA 00:03:38
+# Fork: 1 of 1
+# Warmup Iteration   1: 10.572 ops/ms
+Iteration   1: 11.356 ops/ms
+Iteration   2: 11.326 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableConcat":
+  11.341 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableFromAction
+# Parameters: (count = 10)
+
+# Run progress: 57.50% complete, ETA 00:03:34
+# Fork: 1 of 1
+# Warmup Iteration   1: 4730.433 ops/ms
+Iteration   1: 5039.201 ops/ms
+Iteration   2: 4599.209 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableFromAction":
+  4819.205 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableFromAction
+# Parameters: (count = 100)
+
+# Run progress: 58.33% complete, ETA 00:03:30
+# Fork: 1 of 1
+# Warmup Iteration   1: 421.954 ops/ms
+Iteration   1: 360.561 ops/ms
+Iteration   2: 340.576 ops/ms
+
+
+Result "com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableFromAction":
+  350.569 ops/ms
+
+
+# JMH version: 1.37
+# VM version: JDK 17.0.17, OpenJDK 64-Bit Server VM, 17.0.17+10-Debian-1deb12u1
+# VM invoker: /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+# VM options: <none>
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 2 s each
+# Measurement: 2 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.reactive.benchmarks.SpecializedTypesBenchmark.rxJavaCompletableFromAction
+# Parameters: (count = 1000)
+
+# Run progress: 59.17% complete, ETA 00:03:25
+# Fork: 1 of 1
+# Warmup Iteration   1: 
