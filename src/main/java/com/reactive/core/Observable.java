@@ -165,6 +165,7 @@ public abstract class Observable<T> {
         return new Observable<T>() {
             @Override
             public void subscribe(Observer<? super T> observer) {
+                observer.onSubscribe(Disposable.EMPTY);
                 for (T item : items) {
                     observer.onNext(item);
                 }
@@ -213,6 +214,7 @@ public abstract class Observable<T> {
         return new Observable<T>() {
             @Override
             public void subscribe(Observer<? super T> observer) {
+                observer.onSubscribe(Disposable.EMPTY);
                 for (T item : iterable) {
                     observer.onNext(item);
                 }
@@ -242,6 +244,7 @@ public abstract class Observable<T> {
         return new Observable<T>() {
             @Override
             public void subscribe(Observer<? super T> observer) {
+                observer.onSubscribe(Disposable.EMPTY);
                 try {
                     T result = callable.call();
                     observer.onNext(result);
@@ -350,6 +353,7 @@ public abstract class Observable<T> {
         return new Observable<T>() {
             @Override
             public void subscribe(Observer<? super T> observer) {
+                observer.onSubscribe(Disposable.EMPTY);
                 observer.onComplete();
             }
         };
@@ -378,6 +382,7 @@ public abstract class Observable<T> {
         return new Observable<T>() {
             @Override
             public void subscribe(Observer<? super T> observer) {
+                observer.onSubscribe(Disposable.EMPTY);
                 // Never emits
             }
         };
@@ -406,6 +411,7 @@ public abstract class Observable<T> {
         return new Observable<T>() {
             @Override
             public void subscribe(Observer<? super T> observer) {
+                observer.onSubscribe(Disposable.EMPTY);
                 observer.onError(error);
             }
         };
@@ -490,6 +496,7 @@ public abstract class Observable<T> {
         return new Observable<Integer>() {
             @Override
             public void subscribe(Observer<? super Integer> observer) {
+                observer.onSubscribe(Disposable.EMPTY);
                 for (int i = 0; i < count; i++) {
                     observer.onNext(start + i);
                 }

@@ -6,7 +6,9 @@ import com.reactive.core.Observer;
 import com.reactive.core.Scheduler;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * Operador delay: retrasa la emisión de cada elemento por un tiempo específico.
@@ -62,37 +64,74 @@ public class ObservableDelay<T> extends Observable<T> {
     @Override
     public void subscribe(Observer<? super T> observer) {
         AtomicBoolean disposed = new AtomicBoolean(false);
-        AtomicInteger pendingTasks = new AtomicInteger(0);
+        AtomicReference<Disposable> upstreamDisposable = new AtomicReference<>();
+        List<Disposable> scheduledTasks = new CopyOnWriteArrayList<>();
+        
+        Disposable mainDisposable = new Disposable() {
+            @Override
+            public void dispose() {
+                disposed.set(true);
+                Disposable d = upstreamDisposable.get();
+                if (d != null) {
+                    d.dispose();
+                }
+                // Cancelar todas las tareas programadas
+                for (Disposable task : scheduledTasks) {
+                    if (task != null) {
+                        task.dispose();
+                    }
+                }
+                scheduledTasks.clear();
+            }
+            
+            @Override
+            public boolean isDisposed() {
+                return disposed.get();
+            }
+        };
         
         source.subscribe(new Observer<T>() {
             @Override
+            public void onSubscribe(Disposable d) {
+                upstreamDisposable.set(d);
+                observer.onSubscribe(mainDisposable);
+            }
+            
+            @Override
             public void onNext(T value) {
                 if (!disposed.get()) {
-                    pendingTasks.incrementAndGet();
-                    scheduler.scheduleDirect(() -> {
+                    Disposable task = scheduler.scheduleDirect(() -> {
                         if (!disposed.get()) {
                             observer.onNext(value);
                         }
-                        pendingTasks.decrementAndGet();
                     }, delay, unit);
+                    if (task != null) {
+                        scheduledTasks.add(task);
+                    }
                 }
             }
             
             @Override
             public void onError(Throwable error) {
                 if (!disposed.getAndSet(true)) {
-                    scheduler.scheduleDirect(() -> {
+                    Disposable task = scheduler.scheduleDirect(() -> {
                         observer.onError(error);
                     }, delay, unit);
+                    if (task != null) {
+                        scheduledTasks.add(task);
+                    }
                 }
             }
             
             @Override
             public void onComplete() {
                 if (!disposed.getAndSet(true)) {
-                    scheduler.scheduleDirect(() -> {
+                    Disposable task = scheduler.scheduleDirect(() -> {
                         observer.onComplete();
                     }, delay, unit);
+                    if (task != null) {
+                        scheduledTasks.add(task);
+                    }
                 }
             }
         });

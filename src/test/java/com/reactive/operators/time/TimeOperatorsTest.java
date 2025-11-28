@@ -1,7 +1,7 @@
 package com.reactive.operators.time;
 
 import com.reactive.core.Observable;
-import com.reactive.core.Schedulers;
+import com.reactive.schedulers.Schedulers;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
