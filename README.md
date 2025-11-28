@@ -1,5 +1,10 @@
 # JReactive
 
+[![CI Build](https://github.com/yasmramos/jreactive/actions/workflows/ci.yml/badge.svg)](https://github.com/yasmramos/jreactive/actions/workflows/ci.yml)
+[![Java Version](https://img.shields.io/badge/Java-17%2B-blue.svg)](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/yasmramos/jreactive)](https://github.com/yasmramos/jreactive/releases)
+
 Una biblioteca de programación reactiva moderna para Java, diseñada para ser más simple y fácil de usar que RxJava, pero con todas las características esenciales.
 
 ## 🚀 Características
