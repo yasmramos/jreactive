@@ -1,0 +1,97 @@
+digraph ReactiveJava {
+    rankdir=TB;
+    node [shape=box, style=rounded];
+    
+    // Título
+    label = "Reactive Java - Arquitectura";
+    labelloc = "t";
+    fontsize = 20;
+    
+    // Capa de Usuario
+    subgraph cluster_user {
+        label = "Capa de Usuario";
+        style = filled;
+        color = lightblue;
+        
+        User [label="Código del Usuario"];
+    }
+    
+    // Capa Core
+    subgraph cluster_core {
+        label = "Core (Núcleo)";
+        style = filled;
+        color = lightgreen;
+        
+        Observable [label="Observable\n(Clase Principal)"];
+        Observer [label="Observer\n(Consumidor)"];
+        Disposable [label="Disposable\n(Suscripción)"];
+        Emitter [label="Emitter\n(Emisor)"];
+        ObservableSource [label="ObservableSource\n(Interfaz Base)"];
+    }
+    
+    // Operadores
+    subgraph cluster_operators {
+        label = "Operadores";
+        style = filled;
+        color = lightyellow;
+        
+        subgraph cluster_creation {
+            label = "Creación";
+            ObsCreate [label="create, just\nfromIterable\nrange, interval"];
+        }
+        
+        subgraph cluster_transform {
+            label = "Transformación";
+            ObsTransform [label="map, flatMap\nconcatMap\nswitchMap"];
+        }
+        
+        subgraph cluster_filter {
+            label = "Filtrado";
+            ObsFilter [label="filter, take\nskip, distinct\nfirst, last"];
+        }
+        
+        subgraph cluster_combine {
+            label = "Combinación";
+            ObsCombine [label="concat, merge\nzip\ndefaultIfEmpty"];
+        }
+        
+        subgraph cluster_error {
+            label = "Errores";
+            ObsError [label="onErrorReturn\nonErrorResumeNext\nretry"];
+        }
+        
+        subgraph cluster_utility {
+            label = "Utilidad";
+            ObsUtility [label="doOnNext\ndoOnError\ndoOnComplete"];
+        }
+    }
+    
+    // Schedulers
+    subgraph cluster_schedulers {
+        label = "Schedulers (Threading)";
+        style = filled;
+        color = lightcoral;
+        
+        Scheduler [label="Scheduler\n(Interfaz)"];
+        SchedTypes [label="io()\ncomputation()\nnewThread()\nimmediate()"];
+    }
+    
+    // Relaciones principales
+    User -> Observable [label="usa"];
+    Observable -> Observer [label="notifica"];
+    Observable -> Disposable [label="retorna"];
+    Observable -> Emitter [label="usa"];
+    Observable -> ObservableSource [label="implementa"];
+    
+    // Operadores conectados a Observable
+    Observable -> ObsCreate [style=dashed, label="métodos"];
+    Observable -> ObsTransform [style=dashed];
+    Observable -> ObsFilter [style=dashed];
+    Observable -> ObsCombine [style=dashed];
+    Observable -> ObsError [style=dashed];
+    Observable -> ObsUtility [style=dashed];
+    
+    // Schedulers
+    Observable -> Scheduler [label="usa\nsubscribeOn\nobserveOn"];
+    Scheduler -> SchedTypes [style=dashed];
+}

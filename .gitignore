@@ -1,0 +1,61 @@
+# Compiled class files
+*.class
+*.jar
+*.war
+*.ear
+
+# Package Files
+*.nar
+
+# Build directories
+target/
+build/
+bin/
+out/
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle
+**/build/
+!src/**/build/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# JMH
+jmh-result.json
+
+# Benchmark results
+benchmark_output.txt
+benchmark_results*.txt
+benchmark_results*.json

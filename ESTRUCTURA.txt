@@ -1,0 +1,137 @@
+reactive-java/
+│
+├── 📄 README.md                    # Documentación completa de la biblioteca
+├── 📄 RESUMEN.md                   # Resumen ejecutivo del proyecto
+├── 📄 INICIO_RAPIDO.md            # Guía de inicio rápido (5 minutos)
+├── 📄 PROXIMOS_PASOS.md           # Mejoras y características futuras
+├── 📄 LICENSE                      # Licencia MIT
+├── 📄 pom.xml                      # Configuración Maven
+├── 📄 build.gradle                 # Configuración Gradle
+├── 📄 compile.sh                   # Script de compilación
+├── 📄 architecture.dot             # Diagrama de arquitectura (Graphviz)
+│
+├── 📁 src/
+│   │
+│   ├── 📁 main/java/com/reactive/
+│   │   │
+│   │   ├── 📁 core/                           # 🔵 NÚCLEO (7 archivos)
+│   │   │   ├── Observable.java                # Clase principal - API fluida
+│   │   │   ├── Observer.java                  # Interfaz para consumir eventos
+│   │   │   ├── ObservableSource.java          # Interfaz base
+│   │   │   ├── Disposable.java                # Manejo de suscripciones
+│   │   │   ├── Emitter.java                   # Interfaz para emitir eventos
+│   │   │   ├── BasicEmitter.java              # Implementación del emitter
+│   │   │   └── LambdaObserver.java            # Observer para lambdas
+│   │   │
+│   │   ├── 📁 operators/                      # 🟢 OPERADORES (27 archivos)
+│   │   │   │
+│   │   │   ├── # Creación (8 archivos)
+│   │   │   ├── ObservableCreate.java          # Crear Observable personalizado
+│   │   │   ├── ObservableFromArray.java       # Desde array
+│   │   │   ├── ObservableFromIterable.java    # Desde Iterable
+│   │   │   ├── ObservableEmpty.java           # Observable vacío
+│   │   │   ├── ObservableError.java           # Observable con error
+│   │   │   ├── ObservableNever.java           # Observable que nunca emite
+│   │   │   ├── ObservableRange.java           # Rango de números
+│   │   │   ├── ObservableInterval.java        # Emisión periódica
+│   │   │   │
+│   │   │   ├── # Transformación (4 archivos)
+│   │   │   ├── ObservableMap.java             # Transformar elementos
+│   │   │   ├── ObservableFlatMap.java         # Aplanar Observables
+│   │   │   ├── ObservableConcatMap.java       # FlatMap secuencial
+│   │   │   ├── ObservableSwitchMap.java       # Cambiar entre Observables
+│   │   │   │
+│   │   │   ├── # Filtrado (5 archivos)
+│   │   │   ├── ObservableFilter.java          # Filtrar elementos
+│   │   │   ├── ObservableTake.java            # Tomar n elementos
+│   │   │   ├── ObservableSkip.java            # Saltar n elementos
+│   │   │   ├── ObservableDistinctUntilChanged.java  # Eliminar duplicados consecutivos
+│   │   │   ├── ObservableLast.java            # Último elemento
+│   │   │   │
+│   │   │   ├── # Combinación (4 archivos)
+│   │   │   ├── ObservableConcat.java          # Concatenar secuencialmente
+│   │   │   ├── ObservableMerge.java           # Fusionar concurrentemente
+│   │   │   ├── ObservableZip.java             # Combinar por pares
+│   │   │   ├── ObservableDefaultIfEmpty.java  # Valor por defecto si vacío
+│   │   │   │
+│   │   │   ├── # Utilidad (5 archivos)
+│   │   │   ├── ObservableDoOnNext.java        # Acción por elemento
+│   │   │   ├── ObservableDoOnError.java       # Acción en error
+│   │   │   ├── ObservableDoOnComplete.java    # Acción al completar
+│   │   │   ├── ObservableDoOnSubscribe.java   # Acción al suscribirse
+│   │   │   ├── ObservableDoOnDispose.java     # Acción al cancelar
+│   │   │   │
+│   │   │   ├── # Manejo de Errores (3 archivos)
+│   │   │   ├── ObservableOnErrorReturn.java   # Valor por defecto en error
+│   │   │   ├── ObservableOnErrorResumeNext.java  # Continuar con otro Observable
+│   │   │   ├── ObservableRetry.java           # Reintentar en error
+│   │   │   │
+│   │   │   └── # Scheduling (2 archivos)
+│   │   │       ├── ObservableSubscribeOn.java # Scheduler para suscripción
+│   │   │       └── ObservableObserveOn.java   # Scheduler para observación
+│   │   │
+│   │   └── 📁 schedulers/                     # 🟡 SCHEDULERS (2 archivos)
+│   │       ├── Scheduler.java                 # Interfaz de scheduler
+│   │       └── Schedulers.java                # Fábrica de schedulers
+│   │                                          # (io, computation, newThread, immediate)
+│   │
+│   └── 📁 examples/java/com/reactive/examples/  # 🟣 EJEMPLOS (2 archivos)
+│       ├── BasicExamples.java                 # 7 ejemplos básicos
+│       └── AdvancedExamples.java              # 4 ejemplos avanzados
+│
+└── 📁 build/                                   # Directorio de compilación (generado)
+    └── classes/                                # Archivos .class compilados
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+📊 ESTADÍSTICAS DEL PROYECTO:
+
+Total de archivos:         50+
+Archivos Java:             41
+Archivos de documentación: 9
+Líneas de código:          ~3,500+
+Operadores:                27
+Schedulers:                5
+Ejemplos:                  11
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎯 ARCHIVOS PRINCIPALES:
+
+Core (Núcleo):
+  ✓ Observable.java        (340 líneas) - Clase principal con toda la API
+  ✓ Observer.java          (30 líneas)  - Interfaz de consumidor
+  ✓ Disposable.java        (30 líneas)  - Manejo de suscripciones
+
+Schedulers:
+  ✓ Schedulers.java        (189 líneas) - Sistema completo de threading
+
+Ejemplos:
+  ✓ BasicExamples.java     (157 líneas) - Ejemplos para empezar
+  ✓ AdvancedExamples.java  (138 líneas) - Casos de uso reales
+
+Documentación:
+  ✓ README.md              (331 líneas) - Documentación completa
+  ✓ INICIO_RAPIDO.md       (276 líneas) - Guía de 5 minutos
+  ✓ PROXIMOS_PASOS.md      (324 líneas) - Roadmap futuro
+
+═══════════════════════════════════════════════════════════════════════════
+
+🚀 COMANDOS ÚTILES:
+
+Compilar:
+  mvn clean compile
+  gradle build
+  ./compile.sh
+
+Ejecutar ejemplos:
+  mvn exec:java -Dexec.mainClass="com.reactive.examples.BasicExamples"
+  gradle run
+  java -cp build/classes com.reactive.examples.BasicExamples
+
+Empaquetar:
+  mvn package
+  gradle jar
+
+═══════════════════════════════════════════════════════════════════════════

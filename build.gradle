@@ -1,0 +1,61 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.reactive'
+version = '1.0.0'
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+    examples {
+        java {
+            srcDirs = ['src/examples/java']
+        }
+    }
+}
+
+// Configuración para ejecutar los ejemplos básicos
+application {
+    mainClass = 'com.reactive.examples.BasicExamples'
+}
+
+// Tarea personalizada para ejecutar ejemplos avanzados
+task runAdvancedExamples(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath + sourceSets.examples.runtimeClasspath
+    mainClass = 'com.reactive.examples.AdvancedExamples'
+}
+
+// Tarea para crear JAR ejecutable
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'com.reactive.examples.BasicExamples'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+// Compilar ejemplos junto con el código principal
+tasks.register('compileExamples', JavaCompile) {
+    source = sourceSets.examples.java
+    classpath = sourceSets.main.output + sourceSets.examples.compileClasspath
+    destinationDirectory = file("$buildDir/classes/java/examples")
+}
+
+tasks.named('build') {
+    dependsOn 'compileExamples'
+}
