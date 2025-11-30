@@ -1,11 +1,16 @@
 package com.reactive.observables;
 
-import com.reactive.core.*;
+import java.util.concurrent.atomic.AtomicInteger;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
+
+import com.reactive.core.Disposable;
+import com.reactive.core.Observable;
 import com.reactive.schedulers.Schedulers;
 import com.reactive.testing.TestObserver;
-import org.junit.jupiter.api.Test;
-import java.util.concurrent.atomic.AtomicInteger;
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Comprehensive test suite for ConnectableObservable and related operators.
