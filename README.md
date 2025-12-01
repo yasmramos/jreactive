@@ -4,7 +4,8 @@
 [![Java Version](https://img.shields.io/badge/Java-17%2B-blue.svg)](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![GitHub release](https://img.shields.io/github/v/release/yasmramos/jreactive)](https://github.com/yasmramos/jreactive/releases)
-[![Test Coverage](https://img.shields.io/badge/tests-398%20passing-brightgreen.svg)](https://github.com/yasmramos/jreactive/actions/workflows/ci.yml)
+[![Test Coverage](https://img.shields.io/badge/tests-396%20passing-brightgreen.svg)](https://github.com/yasmramos/jreactive/actions/workflows/ci.yml)
+[![GitHub Packages](https://img.shields.io/badge/GitHub%20Packages-v1.0.0--alpha-blue.svg)](https://github.com/yasmramos/jreactive/packages)
 
 A modern reactive programming library for Java, designed to be simpler and easier to use than RxJava, while maintaining all essential features.
 
@@ -26,30 +27,79 @@ A modern reactive programming library for Java, designed to be simpler and easie
 
 ## 🔧 Installation
 
-### Using Maven
+### Option 1: GitHub Packages (Recommended)
+
+#### Maven
+
+Add the GitHub Packages repository to your `pom.xml`:
 
 ```xml
+<repositories>
+    <repository>
+        <id>github</id>
+        <url>https://maven.pkg.github.com/yasmramos/jreactive</url>
+    </repository>
+</repositories>
+
 <dependency>
     <groupId>com.reactive</groupId>
     <artifactId>jreactive</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-alpha</version>
 </dependency>
 ```
 
-### Using Gradle
+Configure authentication in your `~/.m2/settings.xml`:
 
-```gradle
-implementation 'com.reactive:jreactive:1.0.0'
+```xml
+<servers>
+    <server>
+        <id>github</id>
+        <username>YOUR_GITHUB_USERNAME</username>
+        <password>YOUR_GITHUB_TOKEN</password>
+    </server>
+</servers>
 ```
 
-### Build from source
+#### Gradle
+
+Add to your `build.gradle`:
+
+```gradle
+repositories {
+    maven {
+        url = uri("https://maven.pkg.github.com/yasmramos/jreactive")
+        credentials {
+            username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USERNAME")
+            password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.reactive:jreactive:1.0.0-alpha'
+}
+```
+
+### Option 2: Direct JAR Download
+
+Download the latest release directly from GitHub:
+
+| File | Description |
+|------|-------------|
+| [jreactive-1.0.0-alpha.jar](https://github.com/yasmramos/jreactive/releases/download/v1.0.0-alpha/jreactive-1.0.0-alpha.jar) | Main library JAR |
+| [jreactive-1.0.0-alpha-sources.jar](https://github.com/yasmramos/jreactive/releases/download/v1.0.0-alpha/jreactive-1.0.0-alpha-sources.jar) | Source code JAR |
+
+Add to your classpath:
+```bash
+java -cp jreactive-1.0.0-alpha.jar:. YourApplication
+```
+
+### Option 3: Build from Source
 
 ```bash
-# With Maven
+git clone https://github.com/yasmramos/jreactive.git
+cd jreactive
 mvn clean install
-
-# With Gradle
-gradle build
 ```
 
 ## 📚 Basic Concepts
