@@ -48,18 +48,6 @@ Add the GitHub Packages repository to your `pom.xml`:
 </dependency>
 ```
 
-Configure authentication in your `~/.m2/settings.xml`:
-
-```xml
-<servers>
-    <server>
-        <id>github</id>
-        <username>YOUR_GITHUB_USERNAME</username>
-        <password>YOUR_GITHUB_TOKEN</password>
-    </server>
-</servers>
-```
-
 #### Gradle
 
 Add to your `build.gradle`:
