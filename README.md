@@ -48,26 +48,6 @@ Add the GitHub Packages repository to your `pom.xml`:
 </dependency>
 ```
 
-#### Gradle
-
-Add to your `build.gradle`:
-
-```gradle
-repositories {
-    maven {
-        url = uri("https://maven.pkg.github.com/yasmramos/jreactive")
-        credentials {
-            username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USERNAME")
-            password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
-        }
-    }
-}
-
-dependencies {
-    implementation 'com.reactive:jreactive:1.0.0-alpha'
-}
-```
-
 ### Option 2: Direct JAR Download
 
 Download the latest release directly from GitHub:
