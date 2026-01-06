@@ -54,7 +54,7 @@ import java.util.function.*;
  * @see Completable
  * @see Observer
  */
-public abstract class Observable<T> {
+public abstract class Observable<T> implements ObservableSource<T> {
     
     /**
      * Subscribes an Observer to this Observable.
@@ -1775,6 +1775,111 @@ public abstract class Observable<T> {
         };
     }
     
+    /**
+     * Returns an Observable that emits items that combine this Observable's elements
+     * with those of another ObservableSource, using a zipper function.
+     * <p>
+     * The resulting Observable completes when either source completes.
+     * <p>
+     * Example:
+     * <pre>{@code
+     * Observable.just(1, 2, 3)
+     *     .zipWith(Observable.just("a", "b", "c"), (num, str) -> num + str)
+     *     // emits: "1a", "2b", "3c"
+     * }</pre>
+     *
+     * @param <U> the type of items emitted by the other ObservableSource
+     * @param <R> the type of items emitted by the resulting Observable
+     * @param other the other ObservableSource to zip with
+     * @param zipper the function that combines items from both sources
+     * @return an Observable that emits combined items
+     * @see #zip(Observable, Observable, BiFunction)
+     */
+    public final <U, R> Observable<R> zipWith(ObservableSource<? extends U> other, 
+                                               BiFunction<? super T, ? super U, ? extends R> zipper) {
+        Objects.requireNonNull(other, "other is null");
+        Objects.requireNonNull(zipper, "zipper is null");
+        Observable<T> source = this;
+        return new Observable<R>() {
+            @Override
+            public void subscribe(Observer<? super R> observer) {
+                Queue<T> queue1 = new ConcurrentLinkedQueue<>();
+                Queue<U> queue2 = new ConcurrentLinkedQueue<>();
+                AtomicBoolean completed1 = new AtomicBoolean(false);
+                AtomicBoolean completed2 = new AtomicBoolean(false);
+                AtomicBoolean disposed = new AtomicBoolean(false);
+                
+                Runnable tryZip = () -> {
+                    while (!queue1.isEmpty() && !queue2.isEmpty() && !disposed.get()) {
+                        try {
+                            R result = zipper.apply(queue1.poll(), queue2.poll());
+                            observer.onNext(result);
+                        } catch (Exception e) {
+                            disposed.set(true);
+                            observer.onError(e);
+                            return;
+                        }
+                    }
+                    
+                    if (!disposed.get() && 
+                        ((completed1.get() && queue1.isEmpty()) || 
+                         (completed2.get() && queue2.isEmpty()))) {
+                        disposed.set(true);
+                        observer.onComplete();
+                    }
+                };
+                
+                source.subscribe(new Observer<T>() {
+                    @Override
+                    public void onNext(T value) {
+                        if (!disposed.get()) {
+                            queue1.offer(value);
+                            tryZip.run();
+                        }
+                    }
+                    
+                    @Override
+                    public void onError(Throwable error) {
+                        if (!disposed.get()) {
+                            disposed.set(true);
+                            observer.onError(error);
+                        }
+                    }
+                    
+                    @Override
+                    public void onComplete() {
+                        completed1.set(true);
+                        tryZip.run();
+                    }
+                });
+                
+                other.subscribe(new Observer<U>() {
+                    @Override
+                    public void onNext(U value) {
+                        if (!disposed.get()) {
+                            queue2.offer(value);
+                            tryZip.run();
+                        }
+                    }
+                    
+                    @Override
+                    public void onError(Throwable error) {
+                        if (!disposed.get()) {
+                            disposed.set(true);
+                            observer.onError(error);
+                        }
+                    }
+                    
+                    @Override
+                    public void onComplete() {
+                        completed2.set(true);
+                        tryZip.run();
+                    }
+                });
+            }
+        };
+    }
+    
     public static <T1, T2, R> Observable<R> combineLatest(Observable<T1> source1, Observable<T2> source2,
                                                             BiFunction<T1, T2, R> combiner) {
         return new Observable<R>() {
@@ -2230,6 +2335,117 @@ public abstract class Observable<T> {
                 }
                 
                 Observable.this.subscribe(new RetryObserver());
+            }
+        };
+    }
+    
+    /**
+     * Returns an Observable that re-subscribes to this Observable when the source Observable
+     * calls onError, based on the signals from the Observable returned by the handler function.
+     * <p>
+     * The handler function receives an Observable of Throwable representing the errors, and
+     * returns an Observable. When this returned Observable emits an item, a retry is triggered.
+     * When it completes, the resulting Observable completes. When it errors, the error is
+     * propagated to the downstream observer.
+     * <p>
+     * Example usage with exponential backoff:
+     * <pre>{@code
+     * source.retryWhen(errors -> errors
+     *     .zipWith(Observable.range(1, 3), (error, retryCount) -> retryCount)
+     *     .flatMap(retryCount -> Observable.timer(
+     *         (long) Math.pow(2, retryCount), TimeUnit.SECONDS)));
+     * }</pre>
+     *
+     * @param handler the function that receives an Observable of errors and returns an Observable
+     *                that signals when to retry
+     * @return an Observable that retries based on the signals from the handler
+     * @see #retry(int)
+     * @see #onErrorReturn(Function)
+     */
+    public final Observable<T> retryWhen(Function<? super Observable<Throwable>, ? extends ObservableSource<?>> handler) {
+        Objects.requireNonNull(handler, "handler is null");
+        Observable<T> source = this;
+        return new Observable<T>() {
+            @Override
+            public void subscribe(Observer<? super T> observer) {
+                // Subject to emit errors to the handler
+                PublishSubject<Throwable> errorSubject = PublishSubject.create();
+                AtomicBoolean disposed = new AtomicBoolean(false);
+                
+                // Runnable to subscribe to source - declared first so it can be referenced
+                final Runnable[] subscribeToSource = new Runnable[1];
+                subscribeToSource[0] = () -> {
+                    if (disposed.get()) return;
+                    
+                    source.subscribe(new Observer<T>() {
+                        @Override
+                        public void onNext(T value) {
+                            if (!disposed.get()) {
+                                observer.onNext(value);
+                            }
+                        }
+                        
+                        @Override
+                        public void onError(Throwable error) {
+                            if (!disposed.get()) {
+                                // Emit error to handler, which may trigger retry
+                                errorSubject.onNext(error);
+                            }
+                        }
+                        
+                        @Override
+                        public void onComplete() {
+                            if (!disposed.get()) {
+                                disposed.set(true);
+                                observer.onComplete();
+                            }
+                        }
+                    });
+                };
+                
+                // Apply handler to get retry signal Observable
+                ObservableSource<?> retrySignals;
+                try {
+                    retrySignals = handler.apply(errorSubject);
+                } catch (Exception e) {
+                    observer.onError(e);
+                    return;
+                }
+                
+                if (retrySignals == null) {
+                    observer.onError(new NullPointerException("The handler returned a null ObservableSource"));
+                    return;
+                }
+                
+                // Subscribe to retry signals
+                retrySignals.subscribe(new Observer<Object>() {
+                    @Override
+                    public void onNext(Object signal) {
+                        // Retry signal received - resubscribe to source
+                        if (!disposed.get()) {
+                            subscribeToSource[0].run();
+                        }
+                    }
+                    
+                    @Override
+                    public void onError(Throwable error) {
+                        if (!disposed.get()) {
+                            disposed.set(true);
+                            observer.onError(error);
+                        }
+                    }
+                    
+                    @Override
+                    public void onComplete() {
+                        if (!disposed.get()) {
+                            disposed.set(true);
+                            observer.onComplete();
+                        }
+                    }
+                });
+                
+                // Initial subscription
+                subscribeToSource[0].run();
             }
         };
     }

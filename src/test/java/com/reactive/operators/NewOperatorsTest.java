@@ -785,4 +785,236 @@ public class NewOperatorsTest {
         assertEquals(Arrays.asList(7, 8), windows.get(2));
         // 3, 6, 9 are skipped
     }
+    
+    // ==================== zipWith() Tests ====================
+    
+    @Test
+    public void testZipWithBasic() {
+        List<String> results = new ArrayList<>();
+        
+        Observable.just(1, 2, 3)
+            .zipWith(Observable.just("a", "b", "c"), (num, str) -> num + str)
+            .subscribe(new Observer<String>() {
+                @Override public void onNext(String value) { results.add(value); }
+                @Override public void onError(Throwable error) { fail("Unexpected error"); }
+                @Override public void onComplete() {}
+            });
+        
+        assertEquals(Arrays.asList("1a", "2b", "3c"), results);
+    }
+    
+    @Test
+    public void testZipWithDifferentLengths() {
+        List<String> results = new ArrayList<>();
+        AtomicBoolean completed = new AtomicBoolean(false);
+        
+        Observable.just(1, 2, 3, 4, 5)
+            .zipWith(Observable.just("a", "b"), (num, str) -> num + str)
+            .subscribe(new Observer<String>() {
+                @Override public void onNext(String value) { results.add(value); }
+                @Override public void onError(Throwable error) { fail("Unexpected error"); }
+                @Override public void onComplete() { completed.set(true); }
+            });
+        
+        assertEquals(Arrays.asList("1a", "2b"), results);
+        assertTrue(completed.get(), "Should complete when shorter source completes");
+    }
+    
+    @Test
+    public void testZipWithEmptySource() {
+        List<String> results = new ArrayList<>();
+        AtomicBoolean completed = new AtomicBoolean(false);
+        
+        Observable.<Integer>empty()
+            .zipWith(Observable.just("a", "b", "c"), (num, str) -> num + str)
+            .subscribe(new Observer<String>() {
+                @Override public void onNext(String value) { results.add(value); }
+                @Override public void onError(Throwable error) { fail("Unexpected error"); }
+                @Override public void onComplete() { completed.set(true); }
+            });
+        
+        assertTrue(results.isEmpty());
+        assertTrue(completed.get());
+    }
+    
+    @Test
+    public void testZipWithErrorPropagation() {
+        AtomicReference<Throwable> error = new AtomicReference<>();
+        RuntimeException testError = new RuntimeException("Test error");
+        
+        // Test that error from source propagates correctly
+        Observable.<Integer>create(emitter -> {
+            emitter.onError(testError);
+        }).zipWith(Observable.just("a", "b"), (num, str) -> num + str)
+          .subscribe(new Observer<String>() {
+              @Override public void onNext(String value) {}
+              @Override public void onError(Throwable e) { error.set(e); }
+              @Override public void onComplete() {}
+          });
+        
+        assertSame(testError, error.get());
+    }
+    
+    @Test
+    public void testZipWithZipperException() {
+        AtomicReference<Throwable> error = new AtomicReference<>();
+        
+        Observable.just(1, 2, 3)
+            .zipWith(Observable.just("a", "b", "c"), (num, str) -> {
+                if (num == 2) throw new RuntimeException("Zipper error");
+                return num + str;
+            })
+            .subscribe(new Observer<String>() {
+                @Override public void onNext(String value) {}
+                @Override public void onError(Throwable e) { error.set(e); }
+                @Override public void onComplete() {}
+            });
+        
+        assertNotNull(error.get());
+        assertEquals("Zipper error", error.get().getMessage());
+    }
+    
+    @Test
+    public void testZipWithNullOther() {
+        assertThrows(NullPointerException.class, () -> {
+            Observable.just(1).zipWith(null, (a, b) -> a);
+        });
+    }
+    
+    @Test
+    public void testZipWithNullZipper() {
+        assertThrows(NullPointerException.class, () -> {
+            Observable.just(1).zipWith(Observable.just(2), null);
+        });
+    }
+    
+    // ==================== retryWhen() Tests ====================
+    
+    @Test
+    public void testRetryWhenBasic() {
+        AtomicInteger attempts = new AtomicInteger(0);
+        List<Integer> results = new ArrayList<>();
+        AtomicBoolean completed = new AtomicBoolean(false);
+        
+        Observable.<Integer>create(emitter -> {
+            int attempt = attempts.incrementAndGet();
+            if (attempt < 3) {
+                emitter.onNext(attempt);
+                emitter.onError(new RuntimeException("Retry " + attempt));
+            } else {
+                emitter.onNext(attempt);
+                emitter.onComplete();
+            }
+        }).retryWhen(errors -> errors.take(2)) // Retry up to 2 times
+          .subscribe(new Observer<Integer>() {
+              @Override public void onNext(Integer value) { results.add(value); }
+              @Override public void onError(Throwable e) { fail("Unexpected error: " + e); }
+              @Override public void onComplete() { completed.set(true); }
+          });
+        
+        assertEquals(3, attempts.get());
+        assertEquals(Arrays.asList(1, 2, 3), results);
+        assertTrue(completed.get());
+    }
+    
+    @Test
+    public void testRetryWhenNoRetry() {
+        AtomicInteger attempts = new AtomicInteger(0);
+        List<Integer> results = new ArrayList<>();
+        AtomicBoolean completed = new AtomicBoolean(false);
+        
+        Observable.<Integer>create(emitter -> {
+            attempts.incrementAndGet();
+            emitter.onNext(1);
+            emitter.onComplete();
+        }).retryWhen(errors -> errors) // No errors, no retry
+          .subscribe(new Observer<Integer>() {
+              @Override public void onNext(Integer value) { results.add(value); }
+              @Override public void onError(Throwable e) { fail("Unexpected error"); }
+              @Override public void onComplete() { completed.set(true); }
+          });
+        
+        assertEquals(1, attempts.get());
+        assertEquals(Arrays.asList(1), results);
+        assertTrue(completed.get());
+    }
+    
+    @Test
+    public void testRetryWhenExhaustRetries() {
+        AtomicInteger attempts = new AtomicInteger(0);
+        AtomicBoolean completed = new AtomicBoolean(false);
+        
+        Observable.<Integer>create(emitter -> {
+            attempts.incrementAndGet();
+            emitter.onError(new RuntimeException("Always fails"));
+        }).retryWhen(errors -> errors.take(3)) // Retry 3 times, then complete
+          .subscribe(new Observer<Integer>() {
+              @Override public void onNext(Integer value) {}
+              @Override public void onError(Throwable e) { fail("Should complete, not error"); }
+              @Override public void onComplete() { completed.set(true); }
+          });
+        
+        assertEquals(4, attempts.get()); // Initial + 3 retries
+        assertTrue(completed.get(), "Should complete when retry handler completes");
+    }
+    
+    @Test
+    public void testRetryWhenHandlerError() {
+        AtomicInteger attempts = new AtomicInteger(0);
+        AtomicReference<Throwable> receivedError = new AtomicReference<>();
+        RuntimeException handlerError = new RuntimeException("Handler error");
+        
+        Observable.<Integer>create(emitter -> {
+            attempts.incrementAndGet();
+            emitter.onError(new RuntimeException("Source error"));
+        }).retryWhen(errors -> errors.flatMap(e -> Observable.error(handlerError)))
+          .subscribe(new Observer<Integer>() {
+              @Override public void onNext(Integer value) {}
+              @Override public void onError(Throwable e) { receivedError.set(e); }
+              @Override public void onComplete() {}
+          });
+        
+        assertEquals(1, attempts.get());
+        assertSame(handlerError, receivedError.get());
+    }
+    
+    @Test
+    public void testRetryWhenNullHandler() {
+        assertThrows(NullPointerException.class, () -> {
+            Observable.just(1).retryWhen(null);
+        });
+    }
+    
+    @Test
+    public void testRetryWhenHandlerReturnsNull() {
+        AtomicReference<Throwable> error = new AtomicReference<>();
+        
+        Observable.<Integer>create(emitter -> {
+            emitter.onError(new RuntimeException("Test"));
+        }).retryWhen(errors -> null)
+          .subscribe(new Observer<Integer>() {
+              @Override public void onNext(Integer value) {}
+              @Override public void onError(Throwable e) { error.set(e); }
+              @Override public void onComplete() {}
+          });
+        
+        assertNotNull(error.get());
+        assertTrue(error.get() instanceof NullPointerException);
+    }
+    
+    @Test
+    public void testRetryWhenHandlerThrowsException() {
+        AtomicReference<Throwable> error = new AtomicReference<>();
+        RuntimeException handlerException = new RuntimeException("Handler threw");
+        
+        Observable.just(1)
+            .retryWhen(errors -> { throw handlerException; })
+            .subscribe(new Observer<Integer>() {
+                @Override public void onNext(Integer value) {}
+                @Override public void onError(Throwable e) { error.set(e); }
+                @Override public void onComplete() {}
+            });
+        
+        assertSame(handlerException, error.get());
+    }
 }
